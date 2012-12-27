@@ -1,3 +1,5 @@
 .idea
 ledcom-parent-pom.iml
 target
+.project
+.settings
