@@ -183,7 +183,7 @@
 				<version>2.7.1</version>
 				<configuration>
 					<sourceEncoding>${project.build.sourceEncoding}</sourceEncoding>
-					<targetJdk>${java.version}</targetJdk>
+					<targetJdk>1.6</targetJdk>
 				</configuration>
 			</plugin>
 			<plugin>
