@@ -56,6 +56,7 @@
 					<excludes>
 						<exclude>.gitignore</exclude>
 						<exclude>.idea/**</exclude>
+						<exclude>README.md</exclude>
 						<exclude>target/**</exclude>
 					</excludes>
 				</configuration>
@@ -173,9 +174,18 @@
 				<version>2.3</version>
 			</plugin>
 			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>findbugs-maven-plugin</artifactId>
+				<version>2.5.2</version>
+			</plugin>
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-pmd-plugin</artifactId>
 				<version>2.7.1</version>
+				<configuration>
+					<sourceEncoding>${project.build.sourceEncoding}</sourceEncoding>
+					<targetJdk>${java.version}</targetJdk>
+				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
