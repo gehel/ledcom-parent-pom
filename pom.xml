@@ -10,7 +10,7 @@
 
     <groupId>ch.ledcom</groupId>
     <artifactId>ledcom-parent-pom</artifactId>
-    <version>1.9</version>
+    <version>1.10-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <build>
