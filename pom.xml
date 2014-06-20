@@ -108,11 +108,6 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>2.9.1</version>
-                <configuration>
-                    <links>
-                        <link />
-                    </links>
-                </configuration>
                 <executions>
                     <execution>
                         <id>attach-javadocs</id>
@@ -301,8 +296,8 @@
     </issueManagement>
 
     <ciManagement>
-        <system>jenkins</system>
-        <url>https://ledcom.ci.cloudbees.com/</url>
+        <system>travis</system>
+        <url>https://travis-ci.org/gehel/ledcom-parent-pom</url>
     </ciManagement>
 
     <scm>
