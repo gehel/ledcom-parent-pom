@@ -27,7 +27,7 @@
 
     <groupId>ch.ledcom</groupId>
     <artifactId>ledcom-parent-pom</artifactId>
-    <version>1.11-SNAPSHOT</version>
+    <version>1.11</version>
     <packaging>pom</packaging>
 
     <properties>
