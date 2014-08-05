@@ -38,6 +38,9 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <github.global.server>github</github.global.server>
+        <verify.checkstyle.max.violations>0</verify.checkstyle.max.violations>
+        <verify.coverage.threshold>100</verify.coverage.threshold>
+        <verify.mutation.threshold>100</verify.mutation.threshold>
     </properties>
 
     <dependencies>
@@ -115,6 +118,14 @@
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>javancss-maven-plugin</artifactId>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-failsafe-plugin</artifactId>
+            </plugin>
         </plugins>
         <pluginManagement>
             <plugins>
@@ -175,6 +186,30 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-failsafe-plugin</artifactId>
                     <version>2.17</version>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>integration-test</goal>
+                                <goal>verify</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+                <plugin>
+                    <groupId>org.pitest</groupId>
+                    <artifactId>pitest-maven</artifactId>
+                    <version>1.0.0</version>
+                    <configuration>
+                        <mutators>
+                            <mutator>DEFAULTS</mutator>
+                            <mutator>REMOVE_CONDITIONALS</mutator>
+                            <mutator>INLINE_CONSTS</mutator>
+                            <mutator>NON_VOID_METHOD_CALLS</mutator>
+                            <mutator>CONSTRUCTOR_CALLS</mutator>
+                        </mutators>
+                        <mutationThreshold>${verify.mutation.threshold}</mutationThreshold>
+                        <coverageThreshold>${verify.coverage.threshold}</coverageThreshold>
+                    </configuration>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -306,7 +341,7 @@
                     <artifactId>maven-checkstyle-plugin</artifactId>
                     <version>2.12.1</version>
                     <configuration>
-                        <maxAllowedViolations>0</maxAllowedViolations>
+                        <maxAllowedViolations>${verify.checkstyle.max.violations}</maxAllowedViolations>
                     </configuration>
                     <executions>
                         <execution>
