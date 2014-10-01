@@ -31,7 +31,7 @@
 
     <groupId>ch.ledcom</groupId>
     <artifactId>ledcom-parent-pom</artifactId>
-    <version>1.41-SNAPSHOT</version>
+    <version>1.41</version>
     <packaging>pom</packaging>
 
     <properties>
@@ -628,7 +628,7 @@
         <connection>scm:git:git@github.com:gehel/ledcom-parent-pom.git</connection>
         <developerConnection>scm:git:git@github.com:gehel/ledcom-parent-pom.git</developerConnection>
         <url>git@github.com:gehel/ledcom-parent-pom.git</url>
-        <tag>HEAD</tag>
+        <tag>ledcom-parent-pom-1.41</tag>
     </scm>
 
     <profiles>
