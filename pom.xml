@@ -455,7 +455,7 @@
 						<serverId>sonatype-nexus-staging</serverId>
 						<nexusUrl>https://oss.sonatype.org/</nexusUrl>
 						<autoReleaseAfterClose>true</autoReleaseAfterClose>
-						<stagingRepositoryId>chledcom</stagingRepositoryId>
+						<stagingProfileId>16f29b7a3fcc02</stagingProfileId>
 					</configuration>
 				</plugin>
 				<plugin>
