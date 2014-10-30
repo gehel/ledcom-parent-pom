@@ -27,7 +27,7 @@
 
     <groupId>ch.ledcom</groupId>
     <artifactId>ledcom-parent-pom</artifactId>
-    <version>1.53-SNAPSHOT</version>
+    <version>1.53</version>
     <packaging>pom</packaging>
 
     <name>LedCom parent pom</name>
@@ -74,7 +74,7 @@
     <scm>
         <connection>scm:git:git@github.com:gehel/ledcom-parent-pom.git</connection>
         <developerConnection>scm:git:git@github.com:gehel/ledcom-parent-pom.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>ledcom-parent-pom-1.53</tag>
         <url>git@github.com:gehel/ledcom-parent-pom.git</url>
     </scm>
 
