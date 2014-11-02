@@ -215,6 +215,7 @@
                     </configuration>
                     <executions>
                         <execution>
+                            <id>license-check</id>
                             <goals>
                                 <goal>check</goal>
                             </goals>
